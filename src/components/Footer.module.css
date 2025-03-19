@@ -1,0 +1,26 @@
+.footer {
+  height: 80px;
+  background-color: #000;
+  color: #fff;
+  margin-top: auto;
+}
+
+.footerInner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: right;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footerInner {
+    justify-content: center;
+    text-align: center;
+  }
+}
