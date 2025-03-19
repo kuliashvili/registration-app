@@ -1,0 +1,280 @@
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup input::placeholder {
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  font-style: normal;
+}
+
+.form h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form > p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formGroup label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.formGroup input {
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:hover:not(:focus) {
+  border-color: #aaa;
+}
+
+.formGroup input:focus {
+  border-color: var(--input-focus);
+  outline: none;
+}
+
+.inputError {
+  border-color: var(--error-color) !important;
+  background-color: rgba(255, 0, 0, 0.05) !important;
+}
+
+.errorText {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Phone input with country selector */
+.phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.countrySelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 80px;
+  height: 46px;
+  transition: border-color 0.3s;
+  flex-shrink: 0;
+}
+
+.countrySelector:hover {
+  border-color: #aaa;
+}
+
+.countryDropdown {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 280px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid var(--input-border);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.countryOption {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.countryOption:hover {
+  background-color: #f5f5f5;
+}
+
+.flag {
+  width: 24px;
+  height: 18px;
+  text-align: center;
+}
+
+.countryCode {
+  margin-left: auto;
+  color: #666;
+}
+
+.phoneInputWrapper input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Password field */
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.passwordWrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.passwordStrength {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strengthBar {
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.strength0 {
+  background-color: #ff4d4d;
+}
+
+.strength1 {
+  background-color: #ffa64d;
+}
+
+.strength2 {
+  background-color: #ffff4d;
+}
+
+.strength3 {
+  background-color: #4dff4d;
+}
+
+.strength4 {
+  background-color: #4d4dff;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checkboxGroup input {
+  margin-top: 4px;
+}
+
+.signinLink {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.signinLink a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.successMessage {
+  text-align: center;
+}
+
+.successMessage h2 {
+  color: var(--success-color);
+  margin-bottom: 10px;
+}
+
+.successMessage button {
+  margin-top: 20px;
+}
+
+/* Dark mode adjustments */
+:global(.dark-mode) .formContainer {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+:global(.dark-mode) .countrySelector {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+:global(.dark-mode) .countryDropdown {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+:global(.dark-mode) .countryOption:hover {
+  background-color: #3a3a3a;
+}
+:global(.dark-mode) .countrySelector {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.termsConditions {
+  color: inherit;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
